@@ -20,4 +20,4 @@ requireDir('./src/models')
 
 app.use('/sistema', require('./src/routes/routes'));
 
-app.listen(3001, () => console.log('Online na porta 3000'));
+app.listen(3000, () => console.log('Online na porta 3000'));
