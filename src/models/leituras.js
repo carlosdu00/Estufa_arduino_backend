@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const mongoosePaginate = require('mongoose-paginate');
+
 const ReadSchema = new mongoose.Schema({
     data_hora: {
         type:  Date,
@@ -23,4 +25,6 @@ const ReadSchema = new mongoose.Schema({
 
 });
 
-mongoose.model('Read',ReadSchema)
+ReadSchema.plugin(mongoosePaginate);
+
+mongoose.model('Read',ReadSchema);
