@@ -3,6 +3,7 @@ const Leitura = mongoose.model('Read');
 
 module.exports ={
     async insert (req,res){
+        console.log(req.body);
         const leituras = await Leitura.create(req.body);
         console.log(leituras);
         return res.json({leituras});
