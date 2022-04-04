@@ -4,6 +4,7 @@ const Leitura = mongoose.model('Read');
 module.exports ={
     async insert (req,res){
         const leituras = await Leitura.create(req.body);
+        console.log(leituras);
         return res.json({leituras});
     },
     async index (req,res) {
