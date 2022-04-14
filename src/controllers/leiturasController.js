@@ -11,7 +11,7 @@ module.exports ={
     async index (req,res) {
         const {page} = req.query;
 
-        const leituras = await Leitura.paginate({}, {page, limit: 5,})
+        const leituras = await Leitura.paginate({}, {page, limit: 50,sort:"data_hora"})
         return res.json({leituras});
     },
     async details (req,res){
