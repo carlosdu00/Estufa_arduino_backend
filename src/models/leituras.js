@@ -10,7 +10,7 @@ const ReadSchema = new mongoose.Schema({
     temperatura_ar:{
         type: Number
     },
-    humidade_ar:{
+    umidade_ar:{
         type: Number
     },
     temperatura_solo:{
